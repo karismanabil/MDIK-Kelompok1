@@ -3,16 +3,16 @@ config:
   # It's designed to be highly scalable
   target: http://localhost:3000
   phases:
-    - duration: '2m'
-      arrivalRate: 100
+    - duration: 60
+      arrivalRate: 1
       # rampTo: 100
       name: Ringan
-    - duration: '3m'
-      arrivalRate: 300
+    - duration: 60
+      arrivalRate: 2
       # rampTo: 5
       name: Sedang
-    - duration: '5m'
-      arrivalRate: 500
+    - duration: 60
+      arrivalRate: 3
       # rampTo: 10
       name: Berat
   # Load & configure a couple of useful plugins
@@ -22,7 +22,7 @@ config:
     apdex: {}
     metrics-by-endpoint: {}
   apdex:
-    threshold: 100
+    threshold: 500
   ensure:
     thresholds:
       - http.response_time.p99: 1000   
@@ -31,10 +31,10 @@ scenarios:
   - flow:
       - loop:
           - get:
-              url: '/ownership'
-          # - get:
-          #     url: '/general_payments'
-          # - get:
-          #     url: '/research_payments'
+              url: '/ownership?order=asc&offset=10&limit=1&sort_by=record_id'
+          - get:
+              url: '/general_payments?order=asc&offset=10&limit=100'
+          - get:
+              url: '/research_payments?order=asc&offset=30&limit=20'
         count: 10
         

@@ -2,7 +2,8 @@
     "yaml.schemas": {
         "https://www.artillery.io/schema.json": [
             "file:///d%3A/Tugas/S2/Semester%201/Manajemen%20Data%2C%20Informasi%2C%20dan%20Konten/Tugas/test.yml",
-            "file:///d%3A/Tugas/S2/Semester%201/Manajemen%20Data%2C%20Informasi%2C%20dan%20Konten/Tugas/openpaymentdatatest.yml"
+            "file:///d%3A/Tugas/S2/Semester%201/Manajemen%20Data%2C%20Informasi%2C%20dan%20Konten/Tugas/openpaymentdatatest.yml",
+            "file:///c%3A/Users/Karisma%20Nabil/AppData/Local/Microsoft/Windows/INetCache/IE/4YD2EL2T/bigdata-load-test%5B1%5D.yml"
         ]
     }
 }
